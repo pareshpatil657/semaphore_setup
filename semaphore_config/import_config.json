@@ -11,7 +11,7 @@
   "repositories":[
     {
       "name": "devops_semaphore",
-      "git_url": "/tmp/repositories/devops_idea_semaphore.git",
+      "git_url": "/tmp/repositories/semaphore_setup.git",
       "ssh_key_name": "dummy_key"
     }
   ],
