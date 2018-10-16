@@ -1,0 +1,11 @@
+version: '2'
+  
+services:
+
+  load_more:
+    
+    image: {{load_more_image }}
+    volumes: 
+       - "/tmp/repositories:/tmp/repositories:ro\"    
+        
+    command: "/bin/sh"

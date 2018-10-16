@@ -1,0 +1,10 @@
+---
+
+  - name: Copy docker-compose file to host
+    template: 
+      src: docker-compose.yml.j2
+      dest: /tmp/docker-compose.yml
+
+  - name: Run docker docker-compose    
+    command: chdir=/tmp/  docker-compose up
+    

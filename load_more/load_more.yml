@@ -1,0 +1,7 @@
+--- 
+  - hosts: Semaphore
+    gather_facts: true
+    become: true
+    roles: 
+
+      - load_more

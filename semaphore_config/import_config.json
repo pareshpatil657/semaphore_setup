@@ -1,0 +1,36 @@
+{
+  "project_name": "load_more",
+  "ssh_keys":[
+    {
+      "name": "dummy_key",
+      "type": "ssh",
+      "key": "abcd",
+      "secret": "abcd"
+    }
+  ],
+  "repositories":[
+    {
+      "name": "devops_semaphore",
+      "git_url": "/tmp/repositories/devops_idea_semaphore.git",
+      "ssh_key_name": "dummy_key"
+    }
+  ],
+  "inventory":[
+    {
+      "name": "dummy_inventory",
+      "type": "static",
+      "inventory": "[semaphore] \n Semaphore",
+      "ssh_key_name": "dummy_key"
+    }
+  ],
+  "templates":[
+    {
+      "alias": "load_more",
+      "playbook": "load_more/load_more.yml",
+      "inventory_name": "dummy_inventory",
+      "repository_name": "devops_semaphore",
+      "ssh_key_name": "dummy_key"
+    }
+    
+  ]
+}
