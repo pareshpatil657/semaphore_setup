@@ -19,7 +19,7 @@
     {
       "name": "dummy_inventory",
       "type": "static",
-      "inventory": "[semaphore] \n Semaphore",
+      "inventory": "[semaphore] \n semaphore",
       "ssh_key_name": "dummy_key"
     }
   ],
