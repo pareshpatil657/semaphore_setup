@@ -7,7 +7,14 @@
       "key": "abcd",
       "secret": "abcd"
     }
-  ],  
+  ],
+  "repositories":[
+        {
+               "name": "devops_semaphore",
+               "git_url": "/tmp/semaphore_setup/semaphore_setup.git",
+               "ssh_key_name": "dummy_key"
+         }
+    ],
   "inventory":[
     {
       "name": "dummy_inventory",
