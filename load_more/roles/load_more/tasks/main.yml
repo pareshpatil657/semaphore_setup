@@ -30,7 +30,7 @@
           "repositories":[
             {
              "name": "playbooks",
-             "git_url": "/tmp/repo-to-copy/semaphore/playbooks/.git",
+             "git_url": "/tmp/repositories/semaphore/playbooks/.git",
              "ssh_key_name": "dummy_key"
             }
           ],

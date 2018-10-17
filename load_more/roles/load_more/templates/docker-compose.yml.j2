@@ -8,5 +8,5 @@ services:
     
     volumes:
        - "/tmp/repo-to-copy:/opt/:Z"
-    command: bash -c "mkdir -p /opt/semaphore/ && cp -r /tmp/semaphore_config /opt/semaphore/config   && cp -r /tmp/load_more/  /opt/semaphore/playbooks"
+    command: bash -c "mkdir -p /opt/semaphore/ && cp -r /tmp/semaphore_config /opt/semaphore/config   && cp -r /tmp/playbooks/  /opt/semaphore/playbooks"
     
