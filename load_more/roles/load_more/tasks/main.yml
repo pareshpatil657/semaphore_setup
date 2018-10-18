@@ -21,22 +21,8 @@
     command: chdir=/tmp/repo-to-copy/semaphore/playbooks/ git commit -m "add all files"    
 
   - name: Append repository json text to config.json
-    blockinfile:
-        marker: " "
-        backup: true
-        path: /tmp/repo-to-copy/semaphore/config/config.json
-        insertbefore: '"inventory"\:\['
-        content: |
-          "repositories":[
-            {
-             "name": "playbooks",
-             "git_url": "/tmp/repositories/semaphore/playbooks/.git",
-             "ssh_key_name": "dummy_key"
-            }
-          ],
+    shell: python /tmp/semaphore_setup/semaphore_setup/scripts/fix_config.py  /tmp/repo-to-copy/semaphore/config/config.json > /tmp/repo-to-copy/semaphore/config/new_config.json
 
   - name: Import Playbooks json
-    shell: python /tmp/semaphore_setup/semaphore_setup/semaphore_api_call/main.py  --username {{ semaphore_username }} --password {{ semaphore_password }} --host   {{ semaphore_url }} --project-file /tmp/repo-to-copy/semaphore/config/config.json
-  
-   
-  
+    shell: python /tmp/semaphore_setup/semaphore_setup/semaphore_api_call/main.py  --username {{ semaphore_username }} --password {{ semaphore_password }} --host   {{ semaphore_url }} --project-file /tmp/repo-to-copy/semaphore/config/new_config.json
+    
